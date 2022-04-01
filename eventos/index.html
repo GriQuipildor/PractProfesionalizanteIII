@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en Vue</title>
+</head>
+<body>
+    <div id="app">
+        <!-- vi-on:... para escuchar eventos DOM y ejecutar algunos JavaScript cuando se activan -->
+        <!-- para event.preventDefault(), Vue proporciona modificadores de eventos, los modificadores son directivas postfijos marcados por un punto-->
+
+        <form v-on:submit.prevent="guardarTarea">
+            <!-- en caso de agregar un :keyUp lo puedo hacer directamente en el input y debo comentar el this.nuevaTarea = null del js -->
+            <!-- vue-on: es igual a usar el @-->
+            <!-- <input type="text" v-model="nuevaTarea" placeholder="Tarea" v-on:keyUp="guardarTarea"> -->
+            <input type="text" v-model="nuevaTarea" placeholder="Tarea">
+            <input type="submit" value="Guardar tarea">
+        </form>
+        <hr>
+
+        <input type="range" v-model="tiempo"> {{ tiempo }}
+        <br><br>
+        <input type="search" v-model="busqueda" placeholder="Buscar tarea">
+
+        <p v-for="(valor, propiedad) in usuario">{{ valor }} : {{propiedad}}</p>
+        <hr>
+        <li v-for="tarea in filtroTareas">{{ tarea.nombre }} : {{ tarea.tiempo }}</li>
+    </div>
+    <script src="../vue/vue.js"></script>
+    <script src="evento.js"></script>
+</body>
+</html>

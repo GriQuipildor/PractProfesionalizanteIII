@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- <input type="text" v-model="enlace"> -->
+        <!-- <a v-bind:href="enlace">{{ enlace }}</a> -->
+        <input v-model="ancho" type="range"> Ancho
+        <br>
+        <!-- para ver el tamaño que me muestra en pantalla -->
+        <!-- {{urlCompleta}} -->
+        <input v-model="alto" type="range"> Alto
+        <br>
+        <!-- v-bind:src es igual a escribir :src="" -->
+        <img v-bind:src="urlCompleta" alt="">
+    </div>
+    <script src="../vue/vue.js"></script>
+    <script src="atributos.js"></script>
+    
+</body>
+</html>
