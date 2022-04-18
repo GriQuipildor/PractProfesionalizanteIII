@@ -1,0 +1,19 @@
+form {font-family:Georgia, 'Times New Roman', Times, serif;}
+
+input:not([type="radio"]),
+textarea,
+label,
+select {
+    display:block;
+}
+
+input[type=submit]{
+    background-color: rgb(195, 43, 226);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+}
+
+.invalido {
+    border: 1px solid red;
+}

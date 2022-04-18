@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding con estilos y clases</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="app">
+        <span>Log-in/out</span>
+        <input type="checkbox" v-model="logged">
+
+            <!-- class=user-info es una clase estatica y :class es dinamica -->
+    <!-- <article class="user-info" :class="{ 'logged-in': logged, 'logged-out': !logged }"> -->
+        <article class="user-info" :class="estilos">
+            <!-- mostrar msj si el usuario esta logueado o no -->
+            <!-- {{ logged ? mensaje.in : mensaje.out }} -->
+            {{ mensaje }}
+        </article>
+
+        <pre> {{ $data }} </pre>
+
+    </div>
+
+    <script src="../vue/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="estilos.js"></script>
+</body>
+</html>

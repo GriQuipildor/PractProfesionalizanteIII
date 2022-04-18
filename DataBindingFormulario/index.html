@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding Formulario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="app">
+        <form class="form"> 
+            <label for="nombre">Nombre</label>
+            <!-- !form si esta vacio el nombre, pinta el input de rojo  -->
+            <input type="text" id="nombre" required v-model="form.nombre" v-bind:class="{ invalido: !form.nombre }">  
+            <label for="apellidos">Apellidos</label> 
+            <input type="text" id="apellidos" v-model="form.apellidos" v-bind:class="{ invalido: !form.apellidos}">  
+
+            <label for="mensaje">Mensaje</label>  
+            <textarea id="mensaje" required v-model="form.mensaje" v-bind:class="{ invalido: !form.mensaje}"></textarea>  
+
+            <label for="">Hora de contacto</label> 
+            <span>Mañanas</span>
+            <input type="radio" value="mañanas" v-model="form.contacto">
+            <span>Tardes</span> 
+            <input type="radio" value="tardes" v-model="form.contacto">
+            <span>Noches</span> 
+            <input type="radio" value="noches" v-model="form.contacto"> 
+
+            <label for="productos">Producto/s</label>
+            <select id="productos" v-model="form.productos">
+                <option value="producto1">Producto1</option>
+                <option value="producto2">Producto2</option>
+                <option value="producto3">Producto3</option>
+            </select>
+            
+            <label for="acepta">Aceptación de condiciones</label>
+            <input id="acepta" type="checkbox" required v-model="form.acepta">
+            
+            <input type="submit" value="Enviar" v-if="form.acepta">
+        </form>
+
+        <hr>
+        <pre> {{ $data }} </pre>
+    </div>
+
+    <script src="../vue/vue.js"></script>
+    <script src="formulario.js"></script>
+</body>
+</html>
