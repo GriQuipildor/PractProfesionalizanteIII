@@ -1,0 +1,39 @@
+.correcto {
+    background-color: green;
+    color: white;
+}
+
+.incorrecto {
+    background-color: brown;
+    color: white;
+}
+
+.centrarContenido{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.fondo1{
+    background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg");
+}
+
+.button {
+    display: inline-block;
+    background-color: #2d2c2c;
+    border:none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family:serif;
+    font-size: 24px;
+    font-weight:600;
+    color: white;
+    text-transform: uppercase;
+}
+
+.button:hover{
+    background-color: #494849;
+}
+
+
+

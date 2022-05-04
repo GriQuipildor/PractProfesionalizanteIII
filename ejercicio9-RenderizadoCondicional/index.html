@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Renderizado condicional</title>
 </head>
 <body>
     <main id="app">
@@ -14,7 +14,7 @@
             <label for="apellidos">Apellidos</label>
             <input type="text" id="apellidos">
 
-            <label for="direccion">Direccion de envío</label>
+            <label for="direccion">Dirección de envío</label>
             <select id="direccion" v-model="direccion">
                 <option value="misma">Misma direccion que facturación</option>
                 <option value="nueva">Introducir nueva dirección</option>
@@ -27,7 +27,7 @@
             </template>
 
             <div>
-                <input v-model="check" type="checkbox"><span>He leído y acepto la política de proivacidad.</span>
+                <input v-model="check" type="checkbox"><span>He leído y acepto la política de privacidad.</span>
             </div>
 
             <!-- mostrar u ocultar el boton, mostrar solo cuando el check esta marcado-->
