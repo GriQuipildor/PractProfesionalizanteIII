@@ -9,7 +9,6 @@ new Vue ({
         usuariosOrdenados:[],
         cartelIncorrecto: false,
         cartelCorrecto: false,
-        reiniciar: false,
         juegoSinIniciar: true,
     },
     methods: {
@@ -22,7 +21,6 @@ new Vue ({
                 if (this.lista.length == this.usuariosOrdenados.length) {
                     // alert('bien');
                     this.cartelCorrecto = true;
-                    this.reiniciar = true;
                 }
             }else{
                 // console.log('esto es rojo');
@@ -46,14 +44,11 @@ new Vue ({
         },
         
         ReiniciarJuego: function () {
-            this.reiniciar = false;
             this.lista = [];
             this.cartelCorrecto = false;
             this.usuarios = [];
             this.BuscarUsuarios();
-
-            // recarga la ventana actual
-            // location.reload();
+            this.reiniciar = false;
         },
 
         BuscarUsuarios: function () {
@@ -73,6 +68,10 @@ new Vue ({
         },
         IniciarJuego: function () {
             this.juegoSinIniciar = false;
+        },
+
+        CerrarCartelExito: function () {
+            this.cartelCorrecto = false;
         }
     }
 });

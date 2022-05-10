@@ -10,32 +10,41 @@
 <body class="fondo1">
     <div id="juego">
         <div class="centrarContenido" v-if="juegoSinIniciar">
+            <h1>Bienvenidos!</h1>
             <button v-on:click="IniciarJuego" class="button">Jugar</button>
         </div>
         <div v-else>
-            <h1>Juego del orden</h1>
-            <h3>Ordenar los nombres alfabéticamente</h3>
-            <div>
-                <ul>
+            <h1 class="centrarTitulo">JUEGO DEL ORDEN</h1>
+            <div class="column fondo2">
+                <h2 class="">Ordenar los nombres alfabéticamente</h2>
+                <ul class="flex-container">
                     <ol v-for="usuario in usuarios">
-                        <button v-on:click="Ordenar(usuario, $event)"> {{ usuario }}</button>
+                        <button v-on:click="Ordenar(usuario, $event)" class="botones"> {{ usuario }}</button>
                     </ol>
                 </ul>
             </div>
 
-            <div>
-                <h2>Lista</h2>
-                <h3 style="color:red" v-if="cartelIncorrecto">Incorrecto, verifique el nombre y vuelva a intentar</h3>
-                <h2 style="color: rgb(122, 103, 248);" v-if="cartelCorrecto">Muy bien!!!</h2>
-
-                <button v-if="reiniciar" v-on:click="ReiniciarJuego">Reiniciar</button>
-
-                <ul>
-                    <li v-for="item in lista">
-                        {{ item }}
-                    </li>
+            <div class="column fondo2">
+                <h2 class="">Lista</h2>
+                <ul class="flex-container">
+                    <ol v-for="item in lista">
+                        <button class="botonesLista">{{ item }}</button>
+                    </ol>
                 </ul>
+            </div>
 
+            <div class="modal-container" v-if="cartelIncorrecto">
+                <div class="modal">
+                    <h3 class="cartelError">Incorrecto, verifique el nombre y vuelva a intentar</h3>
+                </div>
+            </div>
+            
+            <div class="modal-container" v-if="cartelCorrecto">
+                <div class="modal cartelExito">
+                    <h1>Excelente!</h1>
+                    <button v-on:click="CerrarCartelExito" class="botones">Cerrar</button>
+                    <button v-on:click="ReiniciarJuego" class="botones">Reiniciar</button>
+                </div>
             </div>
         </div>
         <!-- <pre>{{$data}}</pre> -->

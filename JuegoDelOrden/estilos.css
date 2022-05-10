@@ -1,6 +1,6 @@
 .correcto {
-    background-color: green;
-    color: white;
+    background-color: rgb(62, 62, 62) !important;
+    color: white !important;
 }
 
 .incorrecto {
@@ -8,13 +8,36 @@
     color: white;
 }
 
+.juego {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .centrarContenido{
     text-align: center;
     margin-top: 10%;
 }
 
+.centrarTitulo{
+    text-align: center;
+    font-family:sans-serif;
+}
+
 .fondo1{
-    background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg");
+    /* background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg"); */
+    background-image: url("letras.webp");
+    /* background-image: url("https://img.freepik.com/foto-gratis/ninos-juegan-cachorros-madera-letras-numeros-sobre-fondo-blanco-desarrollo-bloques-madera-juguetes-naturales-ecologicos-ninos-vista-superior-endecha-plana-copia-espacio_113966-321.jpg?w=996"); */
+    /* background-image: url("subtle-prism.svg"); */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+.fondo2 {
+        /* background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg"); */
+        background-color: #FFCCCC;
+        /* background-image: url("subtle-prism4.svg"); */
 }
 
 .button {
@@ -25,15 +48,108 @@
     border-radius: 30px;
     cursor: pointer;
     font-family:serif;
-    font-size: 24px;
+    font-size: 40px;
     font-weight:600;
     color: white;
     text-transform: uppercase;
 }
 
-.button:hover{
+.button:hover {
     background-color: #494849;
 }
 
+.column {
+    float: left;
+    width: 46%;
+    padding: 10px;
+    height: 500px;
+    border: 1px black solid;
+    border-radius: 1em;
+    margin: 5px;
+}
 
+.botones {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #fefeff;
+    color: rgb(9, 9, 9);
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 1em;
+    border: 1px solid #554444;
+    cursor: pointer;
+}
 
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 300px;    
+    padding: 0px;
+}
+
+.flex-container > ol {
+    padding-inline-start: 20px;
+}
+
+.botonesLista {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #CCCCFF;
+    color: rgb(9, 9, 9);
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 1em;
+}
+
+.cartelError {
+    display: inline-block;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 20px;
+    width:35%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: azure;
+    background-color: #f50606;
+    border: 1px solid #2a2a2a;
+}
+.cartelExito {
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 45px;
+    padding: 25px;
+    width:30%;
+    color: rgb(30, 30, 30);
+    background-color: #CCFFCC;
+    border: 1px solid #1a191a;
+}
+
+.modal-container {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.modal{
+    position: relative;
+    margin: 0 auto;
+    top: 35%;
+}
+
+h1 {
+    text-align: center;
+    color: #080808;
+    font-family:serif;
+    font-size: 50px;
+}
+
+h2 {
+    text-align: center;
+    color: #262626;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
