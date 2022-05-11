@@ -68,10 +68,6 @@ new Vue ({
         },
         IniciarJuego: function () {
             this.juegoSinIniciar = false;
-        },
-
-        CerrarCartelExito: function () {
-            this.cartelCorrecto = false;
         }
     }
 });

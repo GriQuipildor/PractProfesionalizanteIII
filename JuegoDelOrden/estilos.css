@@ -28,16 +28,13 @@
 .fondo1{
     /* background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg"); */
     background-image: url("letras.webp");
-    /* background-image: url("https://img.freepik.com/foto-gratis/ninos-juegan-cachorros-madera-letras-numeros-sobre-fondo-blanco-desarrollo-bloques-madera-juguetes-naturales-ecologicos-ninos-vista-superior-endecha-plana-copia-espacio_113966-321.jpg?w=996"); */
-    /* background-image: url("subtle-prism.svg"); */
-    /* background-repeat: no-repeat; */
     background-size: cover;
 }
 
 .fondo2 {
-        /* background-image: url("https://www.xtrafondos.com/wallpapers/colores-borrosos-6577.jpg"); */
-        background-color: #FFCCCC;
-        /* background-image: url("subtle-prism4.svg"); */
+        /* background-color: #FFCCCC; */
+        /* background-color: #ffcccc75; */
+        background-color: #ffbfbf4d;
 }
 
 .button {
@@ -60,10 +57,10 @@
 
 .column {
     float: left;
-    width: 46%;
-    padding: 10px;
-    height: 500px;
-    border: 1px black solid;
+    width: 47%;
+    padding: 12px;
+    height: 350px;
+    border: none;
     border-radius: 1em;
     margin: 5px;
 }
@@ -81,6 +78,18 @@
     cursor: pointer;
 }
 
+.botonesLista {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #CCCCFF;
+    color: rgb(9, 9, 9);
+    margin: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 1em;
+    border: 1px solid  #554444;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -91,17 +100,6 @@
 
 .flex-container > ol {
     padding-inline-start: 20px;
-}
-
-.botonesLista {
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: #CCCCFF;
-    color: rgb(9, 9, 9);
-    margin: 5px;
-    text-align: center;
-    padding: 10px;
-    font-size: 18px;
-    border-radius: 1em;
 }
 
 .cartelError {
